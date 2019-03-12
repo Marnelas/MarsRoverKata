@@ -1,98 +1,77 @@
 // Rover Object Goes Here
 // ======================
-var rover = { direction: "N" };
-var contador = null;
-var x = 0;
-var y = 0;
+var rover = {
+  direction: "N",
+  x : 0,
+  y : 0,
+  arraycommand : []
+};
+console.log("ingrese moveNorth,moveEast,moveWest, moveSouth o otra letra para resetear rover")
+
+
+
+
+function moveNorth(rover){
+  rover.direction = "N";
+  y++;
+  moveResult(rover);
+
+}
+function moveEast(rover){
+  rover.direction = "E";
+  x++;
+  moveResult(rover)
+}
+function moveSouth(rover){
+  rover.direction = "S";
+  y--;
+  moveResult(rover)
+}
+function moveWest(rover){
+  rover.direction = "W";
+  x--;
+  moveResult(rover)
+}
+function moveResult(rover){
+
+  switch (rover.direction){
+    case 'N':
+    rover.arraycommand[i] = "N"
+    break;
+    case 'S':
+    rover.arraycommand[i] = "S"
+    break;
+    case 'W':
+    rover.arraycommand[i] = "W"
+    break;
+    case 'E':
+    rover.arraycommand[i] = "E"
+    break;
+    default:
+    "reseteando a rover"
+    rover.arraycommand = [];
+    rover.x = 0;
+    rover.y = 0;
+    rover.direction = "N"
+  }
+  }
 
 
 // ======================
-function turnLeft(rover) {
+/*function turnLeft(rover) {
   console.log("turnLeft was called!");
-position(1)
-console.log(x + ", " + y)
+  position(1);
+  console.log(x + ", " + y);
 }
 
 function turnRight(rover) {
   console.log("turnRight was called!");
-position(2)
+  position(2);
 }
 
 function moveForward(rover) {
   console.log("moveForward was called");
-position(0)
-}
-function position(contador) {
-  switch (rover.direction) {
-    case "N":
-      if (contador == 1) {
-        rover.direction("W");
-        x--;
-        contador = 0;
-      } else if (contador == 2) {
-        rover.direction("E");
-        x++;
-        contador = 0;
-      } else {
-        y++;
-      }
-      break;
-    case "E":
-      if (contador == 1) {
-        rover.direction("N");
-        y++;
-        contador = 0;
-      } else if (contador == 2) {
-        rover.direction("S");
-        y--;
-        contador = 0;
-      } else {
-        x++;
-      }
-      break;
-    case "S":
-      if (contador == 1) {
-        rover.direction("E");
-        contador = 0;
-        x++;
-      } else if (contador == 2) {
-        rover.direction("W");
-        contador = 0;
-        x--;
-      } else {
-        y--;
-      }
-      break;
-    case "W":
-      if (contador == 1) {
-        rover.direction("S");
-        contador = 0;
-        y--;
-      } else if (contador == 2) {
-        rover.direction("N");
-        contador = 0;
-        y++;
-      } else {
-        x--;
-      }
-      break;
-  }
-  function comandlist(list) {
-    var list = ["R","F","F","R","F","F","L","F","R","F","F"];
-for(var i = 0;i < list.length;i++){
-  switch(list[i]){
-case 'R':
-turnRight();
-break;
-case 'L':
-turnLeft();
-break;
-case 'F':
-moveForward();
-break;
+  position(0);
+}*/
 
-  } 
-}
-  }
- 
-}
+
