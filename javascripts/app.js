@@ -6,7 +6,6 @@ var rover = {
   y : 0,
   arraycommand : []
 };
-console.log("ingrese moveNorth,moveEast,moveWest, moveSouth o otra letra para resetear rover")
 
 
 
@@ -30,7 +29,15 @@ function moveSouth(rover){
 function moveWest(rover){
   rover.direction = "W";
   x--;
+  if(tablelimit() == null){
   moveResult(rover)
+  }
+}
+function tablelimit(rover){
+  if(rover.direction == 10 || rover.direction == 10){
+    return true;
+  }
+  return null;
 }
 function moveResult(rover){
 
