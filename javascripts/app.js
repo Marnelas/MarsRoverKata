@@ -6,7 +6,25 @@ var rover = {
   y : 0,
   arraycommand : []
 };
-
+var command = 0;
+function movecommand(command){
+switch(command){
+  case 'f':
+  moveNorth();
+  break;
+  case 'b':
+  moveSouth();
+  break;
+  case 'l':
+  moveEast();
+  break;
+  case 'r':
+  moveWest();
+  break;
+}
+  
+  
+}
 
 
 
