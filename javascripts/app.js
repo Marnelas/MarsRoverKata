@@ -58,45 +58,33 @@ function tablelimit(rover){
   return null;
 }
 function moveResult(rover){
-
+  var i = 0;
   switch (rover.direction){
+    
     case 'N':
-    rover.arraycommand[i] = "N"
+    rover.arraycommand[i] = "N";
+    i++;
     break;
     case 'S':
     rover.arraycommand[i] = "S"
+    i++;
     break;
     case 'W':
     rover.arraycommand[i] = "W"
+    i++;
     break;
     case 'E':
     rover.arraycommand[i] = "E"
+    i++;
     break;
     default:
-    "reseteando a rover"
+    "reseteando a rover"  
     rover.arraycommand = [];
     rover.x = 0;
     rover.y = 0;
+    i = 0;
     rover.direction = "N"
   }
   }
-
-
-// ======================
-/*function turnLeft(rover) {
-  console.log("turnLeft was called!");
-  position(1);
-  console.log(x + ", " + y);
-}
-
-function turnRight(rover) {
-  console.log("turnRight was called!");
-  position(2);
-}
-
-function moveForward(rover) {
-  console.log("moveForward was called");
-  position(0);
-}*/
 
 
